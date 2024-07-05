@@ -166,8 +166,14 @@ public class TextEditor extends JFrame implements ActionListener {
         }
     }
     public static void main(String[] args) throws Exception {
-        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); // Set the look and feel of the UI to the system's look and feel
-         new TextEditor().setVisible(true); // Create an instance of the text editor and make it visible
+          SwingUtilities.invokeLater(() -> {
+            try {
+                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); // Set the look and feel of the UI to the system's look and feel
+            } catch (Exception ex) {
+                ex.printStackTrace(); // Print the stack trace for any exceptions
+            }
+            new TextEditor().setVisible(true); // Create an instance of the text editor and make it visible
+        });
      }
     
     
