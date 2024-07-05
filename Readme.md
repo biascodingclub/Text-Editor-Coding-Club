@@ -48,8 +48,22 @@ public class TextEditor extends JFrame implements ActionListener {
     }
 }
 ```
+## Step 4 : Intitalising in the main funtion
+To view its functionality
+```java
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            try {
+                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); // Set the look and feel of the UI to the system's look and feel
+            } catch (Exception ex) {
+                ex.printStackTrace(); // Print the stack trace for any exceptions
+            }
+            new TextEditor().setVisible(true); // Create an instance of the text editor and make it visible
+        });
+    }
 
-## Step 4: Setting Up the Constructor
+```
+## Step 5: Setting Up the Constructor
 Now, let's set up the constructor to initialize the GUI components and layout.
 
 ```java
@@ -107,7 +121,7 @@ public TextEditor() {
 }
 ```
 
-## Step 5: Creating Menu Items
+## Step 6: Creating Menu Items
 We'll create a helper method to create menu items and add them to menus.
 
 ```java
@@ -119,7 +133,7 @@ private JMenuItem createMenuItem(String name, JMenu menu) {
 }
 ```
 
-## Step 6: Handling Menu Actions
+## Step 7: Handling Menu Actions
 Now, let's handle the actions for each menu item.
 
 ```java
@@ -163,7 +177,7 @@ public void actionPerformed(ActionEvent e) {
 }
 ```
 
-## Step 7: Implementing File Operations
+## Step 8: Implementing File Operations
 Next, let's implement the methods for file operations.
 
 ```java
@@ -212,6 +226,7 @@ private void printFile() {
     }
 }
 ```
+
 
 ## Conclusion
 That's it! We've built a simple text editor using Java Swing. You can now create, open, save, print, and edit text files using this application. Feel free to expand this project by adding more features or improving the UI.
