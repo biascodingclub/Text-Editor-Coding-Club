@@ -1,4 +1,4 @@
-Certainly! Here is the instructional script converted to Markdown format:
+
 
 ---
 
